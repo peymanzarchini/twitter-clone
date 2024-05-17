@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/common/Sidebar";
 import News from "@/components/common/News";
+import Container from "@/components/ui/Container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex justify-between max-w-6xl mx-auto">
+        <Container>
           <Sidebar />
           <main>{children}</main>
           <News />
-        </div>
+        </Container>
       </body>
     </html>
   );
